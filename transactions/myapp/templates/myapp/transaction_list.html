@@ -1,0 +1,10 @@
+{% extends 'myapp/home.html' %}
+
+{% block transactions %}
+    <h2>Transactions:</h2>
+    <ul>
+        {% for transaction in transactions %}
+            <li>{{ transaction.amount }} - {{ transaction.description }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
